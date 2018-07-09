@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="area">
     <el-select v-model="province" placeholder="请选择" @change="changeProvince">
       <el-option :label="value" :value="value" v-for="(value, key) in provinceList" :key="key"></el-option>
     </el-select>
@@ -33,7 +33,7 @@ export default {
     return {
       province: '',
       city: '',
-      town: '',
+      town: ''
     }
   },
   computed: {
@@ -82,8 +82,8 @@ export default {
 }
 </script>
 
-<style>
-.wrapper {
+<style scoped>
+.area {
   display: flex;
   justify-content: space-between;
   width: 100%;
