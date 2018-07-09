@@ -51,6 +51,17 @@ export default {
       return areaData[key] || []
     }
   },
+  watch: {
+    data: {
+      handler(newValue) {
+        const [province, city, town] = newValue || ['', '', '']
+        this.province = province
+        this.city = city
+        this.town = town
+      },
+      deep: true
+    }
+  },
   updated() {
     const data = [this.province, this.city, this.town]
     this.$emit('change', data)

@@ -26,6 +26,7 @@ module.exports = {
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
       // mutate config for production...
+      config.entry = './example/main.js'
     } else {
       // mutate for development...
       config.entry = './example/main.js'
