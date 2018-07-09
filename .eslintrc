@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:vue/essential"
+  ],
+  "rules": {
+    "semi": [1, "never"],
+    "comma-dangle": [1, "never"]
+  }
+}
